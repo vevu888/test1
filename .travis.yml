@@ -1,0 +1,16 @@
+sudo: required
+services:
+  - docker
+
+script:
+  - docker build -t vevu888/end .
+  - docker images <vevu888/end
+
+before_deploy:
+  - docker login -u vevu888  -p Webelong888
+
+deploy:
+  provider: script
+  script: docker push <vevu888/end>
+  on:
+    branch: master
