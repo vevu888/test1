@@ -9,6 +9,8 @@ script:
 before_deploy:
   - docker login -u vevu888  -p Webelong888
 
+  # kknkkkkmkm
+
 deploy:
   provider: script
   script: docker push <vevu888/end>
